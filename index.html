@@ -82,6 +82,9 @@
     .nav-links a:hover { color: var(--cream); }
     .nav-links a:hover::after { width: 100%; }
 
+    .nav-links a.nav-active { color: var(--cream); }
+    .nav-links a.nav-active::after { width: 100%; background: var(--beige); }
+
     /* ── HERO (MARRÓN) ── */
     .hero {
       min-height: 100vh;
@@ -202,6 +205,36 @@
 
     .btn-stone-outline { background: transparent; color: var(--dark); border: 0.5px solid rgba(15,13,12,0.25); }
     .btn-stone-outline:hover { background: var(--dark); color: var(--cream); transform: translateY(-2px); }
+
+    .btn-whatsapp {
+      background: rgba(37,211,102,0.15);
+      color: #25d366;
+      border: 0.5px solid rgba(37,211,102,0.3);
+    }
+    .btn-whatsapp:hover { background: rgba(37,211,102,0.25); transform: translateY(-2px); }
+
+    .hero-avail {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1.75rem;
+    }
+    .hero-avail .avail-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #6dbf85;
+      animation: pulse 2s infinite;
+    }
+    .hero-avail .avail-text {
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: rgba(229,225,224,0.35);
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
 
     /* ── BLOQUES DE SECCIÓN ── */
     .sec {
@@ -576,7 +609,7 @@
       color: rgba(15,13,12,0.4);
     }
 
-    .footer-logo img { height: 100px; width: auto; opacity: 0.3; filter: invert(1); }
+    .footer-logo img { height: 100px; width: auto; opacity: 0.45; }
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
@@ -594,18 +627,19 @@
       }
       .nav-links a {
         font-size: 9px;
+        font-weight: 300;
         letter-spacing: 0.07em;
       }
 
       .hero {
-        padding: 5rem var(--px) 3rem;
+        padding: 5rem var(--px) 2.5rem;
         min-height: 100svh;
         justify-content: flex-start;
       }
-      .hero-title { font-size: clamp(2.8rem, 12vw, 4.5rem); }
-      .hero-sub { font-size: 13px; margin: 1.25rem 0 2rem; }
-      .hero-actions { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-      .hero-actions .btn { width: 100%; text-align: center; }
+      .hero-title { font-size: clamp(2.6rem, 11vw, 4rem); }
+      .hero-sub { font-size: 13px; margin: 1rem 0 1.5rem; }
+      .hero-actions { flex-direction: row; flex-wrap: wrap; gap: 0.6rem; }
+      .hero-actions .btn { width: auto; flex: 1 1 auto; text-align: center; font-size: 10px; padding: 0.8rem 1rem; }
       .hero-scroll { display: none; }
 
       .sec { padding: 3.5rem var(--px); }
@@ -638,7 +672,7 @@
   <nav>
     <a href="index.html" class="nav-logo"><img src="Blanco-02.svg" alt="LIVO"></a>
     <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html" class="nav-active">Inicio</a></li>
       <li><a href="branding.html">Branding</a></li>
       <li><a href="dron.html">Dron</a></li>
       <li><a href="sobre-mi.html">Sobre mí</a></li>
@@ -656,11 +690,18 @@
         <span class="outline">recuerda.</span>
       </h1>
       <p class="hero-sub">
-        Creo identidades visuales con carácter y capturo el mundo desde perspectivas que muy pocos alcanzan.
+        Creo identidades visuales con carácter y capturo el mundo desde perspectivas que muy pocos alcanzan. Branding, dirección de arte y fotografía aérea con dron.
       </p>
       <div class="hero-actions">
         <a href="branding.html" class="btn btn-cream">Ver trabajo</a>
+        <a href="https://wa.me/TUNUMERO" class="btn btn-whatsapp" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.858L.057 23.516a.75.75 0 0 0 .927.927l5.677-1.476A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.693 9.693 0 0 1-4.953-1.36l-.355-.212-3.686.958.977-3.567-.232-.368A9.693 9.693 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>WhatsApp
+        </a>
         <a href="contacto.html" class="btn btn-glass">Hablemos</a>
+      </div>
+      <div class="hero-avail">
+        <span class="avail-dot"></span>
+        <span class="avail-text">Disponible para proyectos</span>
       </div>
     </div>
     <span class="hero-scroll">Scroll ↓</span>
@@ -792,7 +833,7 @@
   <!-- FOOTER -->
       <footer>
     <span>© 2026 LIVO — Diseño & Fotografía Aérea</span>
-    <span class="footer-logo"><img src="Marron-02.svg" alt="LIVO"></span>
+    <span class="footer-logo"><img src="Blanco-02.svg" alt="LIVO"></span>
     <span class="footer-right">Hecho con intención.</span>
   </footer>
 

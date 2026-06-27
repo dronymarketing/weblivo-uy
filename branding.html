@@ -47,33 +47,32 @@
       backdrop-filter: blur(20px);
       border-bottom: 0.5px solid rgba(81,61,54,0.1);
     }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 80px; width: auto; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(81,61,54,0.5); text-decoration: none;
+      position: relative; transition: color 0.25s;
     }
-
-    .nav-logo img {
-      height: 80px;
-      width: auto;
+    .nav-links a::after {
+      content: ''; position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 0.5px;
+      background: var(--brown);
+      transition: width 0.3s ease;
     }
-
-    .nav-back {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(81,61,54,0.5);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .nav-back:hover { color: var(--brown); }
-
+    .nav-links a:hover { color: var(--brown); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.nav-active { color: var(--brown); }
+    .nav-links a.nav-active::after { width: 100%; }
     @media (max-width: 768px) {
       :root { --px: 1.1rem; }
-      .nav-back { font-size: 9px; letter-spacing: 0.06em; }
+      nav { padding: 0 var(--px); height: 60px; }
+      .nav-logo img { height: 56px; }
+      .nav-links { gap: 0.9rem; }
+      .nav-links a { font-size: 9px; font-weight: 300; letter-spacing: 0.07em; }
     }
 
     /* PAGE HEADER */
@@ -249,7 +248,7 @@
       align-items: center;
     }
 
-    .footer-logo img { height: 100px; width: auto; opacity: 0.55; }
+    .footer-logo img { height: 100px; width: auto; opacity: 0.75; }
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
@@ -280,7 +279,13 @@
 
   <nav>
     <a href="index.html" class="nav-logo"><img src="Marron-02.svg" alt="LIVO"></a>
-    <a href="index.html" class="nav-back">← Volver al inicio</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="branding.html" class="nav-active">Branding</a></li>
+      <li><a href="dron.html">Dron</a></li>
+      <li><a href="sobre-mi.html">Sobre mí</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
   </nav>
 
   <div class="page-header">
