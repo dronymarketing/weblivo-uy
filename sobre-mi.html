@@ -69,10 +69,21 @@
     .nav-links a.nav-active::after { width: 100%; }
     @media (max-width: 768px) {
       :root { --px: 1.1rem; }
-      nav { padding: 0 var(--px); height: 60px; }
+      nav {
+        padding: 0 var(--px);
+        height: 60px;
+      }
       .nav-logo img { height: 56px; }
-      .nav-links { position: static; transform: none; gap: 1rem; }
-      .nav-links a { font-size: 9px; font-weight: 300; letter-spacing: 0.07em; }
+      .nav-links {
+        position: static;
+        transform: none;
+        gap: 1rem;
+      }
+      .nav-links a {
+        font-size: 9px;
+        font-weight: 300;
+        letter-spacing: 0.07em;
+      }
     }
 
     /* PAGE HEADER */
