@@ -856,7 +856,7 @@
     <span class="footer-right">Hecho con intención.</span>
   </footer>
   <script>
-    // Color dinámico de la barra de notificaciones según la sección visible
+    // Color de la barra de notificaciones = color exacto que toca el borde superior del viewport (efecto inmersivo)
     const themeMeta = document.getElementById('theme-color-meta');
 
     const sections = [
@@ -868,26 +868,41 @@
       { el: document.querySelector('footer'), color: '#AEA596' },
     ].filter(s => s.el);
 
-    const observer = new IntersectionObserver((entries) => {
-      // Elegir la sección con mayor porcentaje visible cerca del tope
-      let best = null;
-      let bestRatio = 0;
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio > bestRatio) {
-          bestRatio = entry.intersectionRatio;
-          best = entry.target;
-        }
-      });
-      if (best) {
-        const match = sections.find(s => s.el === best);
-        if (match) themeMeta.setAttribute('content', match.color);
-      }
-    }, {
-      threshold: [0.1, 0.25, 0.5, 0.75, 1],
-      rootMargin: '-72px 0px 0px 0px' // descuenta altura del nav fijo
-    });
+    let currentColor = '';
+    let ticking = false;
 
-    sections.forEach(s => observer.observe(s.el));
+    function updateThemeColor() {
+      // Busca qué sección está siendo "cortada" por la línea y=0 (el techo real de la pantalla)
+      let activeColor = sections[0].color;
+
+      for (const s of sections) {
+        const rect = s.el.getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom > 0) {
+          activeColor = s.color;
+          break;
+        }
+        // Si ya scrolleamos más allá de todas, usar la última
+        if (rect.bottom <= 0) {
+          activeColor = s.color;
+        }
+      }
+
+      if (activeColor !== currentColor) {
+        currentColor = activeColor;
+        themeMeta.setAttribute('content', activeColor);
+      }
+      ticking = false;
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(updateThemeColor);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateThemeColor(); // estado inicial
   </script>
 
 </body>
