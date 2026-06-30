@@ -49,7 +49,7 @@
     }
     .nav-logo { display: flex; align-items: center; text-decoration: none; }
     .nav-logo img { height: 80px; width: auto; }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; position: absolute; left: 50%; transform: translateX(-50%); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; position: absolute; left: 50%; transform: translateX(-50%); }
     .nav-links a {
       font-size: 11px; font-weight: 500;
       letter-spacing: 0.12em; text-transform: uppercase;
@@ -69,21 +69,10 @@
     .nav-links a.nav-active::after { width: 100%; }
     @media (max-width: 768px) {
       :root { --px: 1.1rem; }
-      nav {
-        padding: 0 var(--px);
-        height: 60px;
-      }
+      nav { padding: 0 var(--px); height: 60px; }
       .nav-logo img { height: 56px; }
-      .nav-links {
-        position: static;
-        transform: none;
-        gap: 1rem;
-      }
-      .nav-links a {
-        font-size: 9px;
-        font-weight: 300;
-        letter-spacing: 0.07em;
-      }
+      .nav-links { gap: 0.9rem; }
+      .nav-links a { font-size: 9px; font-weight: 300; letter-spacing: 0.07em; }
     }
 
     /* PAGE HEADER */
