@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#513D36" id="theme-color-meta">
   <title>LIVO — Diseño & Fotografía Aérea</title>
   <style>
     @font-face { font-family: 'Catavalo'; src: url('fonts/Catavalo-Thin.ttf'); font-weight: 100; }
@@ -32,9 +33,15 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
 
+    html {
+      background: var(--stone);
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
       overflow-x: hidden;
+      padding-bottom: env(safe-area-inset-bottom);
+      background: var(--stone);
     }
 
     /* ── NAV ── */
@@ -848,6 +855,40 @@
     <span class="footer-logo"><img src="Blanco-02.svg" alt="LIVO"></span>
     <span class="footer-right">Hecho con intención.</span>
   </footer>
+  <script>
+    // Color dinámico de la barra de notificaciones según la sección visible
+    const themeMeta = document.getElementById('theme-color-meta');
+
+    const sections = [
+      { el: document.querySelector('.hero'), color: '#513D36' },
+      { el: document.querySelector('.sec-branding'), color: '#E5E1E0' },
+      { el: document.querySelector('.sec-dron'), color: '#6B7161' },
+      { el: document.querySelector('.sec-sobre'), color: '#DBC7B8' },
+      { el: document.querySelector('.sec-contacto'), color: '#AEA596' },
+      { el: document.querySelector('footer'), color: '#AEA596' },
+    ].filter(s => s.el);
+
+    const observer = new IntersectionObserver((entries) => {
+      // Elegir la sección con mayor porcentaje visible cerca del tope
+      let best = null;
+      let bestRatio = 0;
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > bestRatio) {
+          bestRatio = entry.intersectionRatio;
+          best = entry.target;
+        }
+      });
+      if (best) {
+        const match = sections.find(s => s.el === best);
+        if (match) themeMeta.setAttribute('content', match.color);
+      }
+    }, {
+      threshold: [0.1, 0.25, 0.5, 0.75, 1],
+      rootMargin: '-72px 0px 0px 0px' // descuenta altura del nav fijo
+    });
+
+    sections.forEach(s => observer.observe(s.el));
+  </script>
 
 </body>
 </html>
