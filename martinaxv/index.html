@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0A1A3D">
+<title>Martina — XV Años</title>
+
+<!-- Vista previa para WhatsApp / redes sociales -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://livo.com.uy/martinaxv.html">
+<meta property="og:title" content="Martina — Mis XV Años">
+<meta property="og:description" content="15 de Agosto · Te espero para celebrar juntos esta noche mágica ✨">
+<meta property="og:image" content="https://livo.com.uy/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Martina — Mis XV Años">
+<meta name="twitter:description" content="15 de Agosto · Te espero para celebrar juntos esta noche mágica ✨">
+<meta name="twitter:image" content="https://livo.com.uy/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Marcellus&display=swap" rel="stylesheet">
+
+<style>
+  @font-face {
+    font-family: 'Starlight Rune';
+    src: url('fonts/starlight-rune.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --turquesa: #00FFFF;
+    --noche: #2D1B4E;
+    --dorado: #F0BD5C;
+    --dorado-soft: #f5d28e;
+    --magenta: #C7066E;
+    --marino: #0A1A3D;
+    --bordo: #2E0500;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  /* Scrollbar fina y minimalista, con brillo dorado (Firefox) */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(240,189,92,0.5) transparent;
+  }
+
+  /* Scrollbar fina y minimalista, con brillo dorado (Chrome/Safari/Edge) */
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      rgba(255,246,200,0.95) 0%,
+      rgba(240,189,92,0.6) 45%,
+      rgba(240,189,92,0.05) 100%
+    );
+    border-radius: 999px;
+    box-shadow: 0 0 6px rgba(240,189,92,0.7), 0 0 2px rgba(255,246,200,0.9);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 10px rgba(240,189,92,0.9), 0 0 3px rgba(255,246,200,1);
+  }
+
+  body {
+    font-family: 'Cormorant Garamond', serif;
+    background: var(--marino);
+    color: var(--dorado-soft);
+    overflow-x: hidden;
+  }
+
+  /* ====== HERO ====== */
+  .hero {
+    position: relative;
+    height: 100svh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10,26,61,0.92) 0%,
+      rgba(10,26,61,0.5) 15%,
+      rgba(10,26,61,0.05) 35%,
+      rgba(10,26,61,0.05) 65%,
+      rgba(10,26,61,0.5) 85%,
+      rgba(10,26,61,0.92) 100%
+    );
+    z-index: 2;
+  }
+
+  /* Refuerzo extra para cubrir el watermark inferior derecho con un velo radial */
+  .hero-watermark-veil {
+    position: absolute;
+    z-index: 2;
+    right: -10%;
+    bottom: -8%;
+    width: 65%;
+    height: 38%;
+    background: radial-gradient(
+      ellipse at bottom right,
+      rgba(10,26,61,0.95) 0%,
+      rgba(10,26,61,0.65) 50%,
+      rgba(10,26,61,0) 80%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5rem;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Placeholder del nombre — reemplazar por imagen diseñada */
+  .name-wrap {
+    margin-bottom: 1rem;
+    transform: translateY(-2.3rem);
+  }
+
+  .name-wrap img {
+    max-width: min(85vw, 480px);
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 24px rgba(240,189,92,0.35));
+  }
+
+  /* Nombre con tipografía Starlight Rune (variante alternativa ss01) + textura dorada metálica real */
+  .name-fallback {
+    font-family: 'Starlight Rune', 'Marcellus', serif;
+    font-feature-settings: "ss01" 1;
+    font-variant-alternates: stylistic(ss01);
+    text-transform: uppercase;
+    font-size: clamp(4.5rem, 24vw, 8.5rem);
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+    padding: 0.3em 0.4em;
+    background-image: url('Texturelabs_Metal_270M.jpg');
+    background-size: 150%;
+    background-position: 30% 40%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin-left: -0.06em;
+    filter: drop-shadow(0 4px 18px rgba(0,0,0,0.5));
+    opacity: 0;
+    animation: nameFadeIn 2s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+  }
+
+  .hero-sub {
+    position: absolute;
+    top: calc(50% - 0.7rem + 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 0;
+    animation: nameFadeIn 1s ease 2.8s forwards;
+  }
+
+  @keyframes nameFadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes subReveal {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .frase-wrap {
+    position: absolute;
+    top: calc(50% - 0.7rem + 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 8.5rem;
+    overflow: visible;
+    z-index: 10;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .smoke-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    max-width: 340px;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: radial-gradient(ellipse at 50% 50%, rgba(60,42,135,0.65) 0%, rgba(48,32,115,0.36) 45%, rgba(48,32,115,0) 72%);
+    filter: blur(22px);
+    opacity: 0;
+    animation: smokeAppear 1.8s ease forwards, smokeBreathe 10s ease-in-out infinite 1.8s;
+    pointer-events: none;
+  }
+
+  .smoke-glow::before,
+  .smoke-glow::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(26px);
+  }
+
+  .smoke-glow::before {
+    top: 42%;
+    left: 50%;
+    width: 62%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(85,55,160,0.55) 0%, rgba(85,55,160,0.26) 50%, rgba(85,55,160,0) 74%);
+    animation: smokeDriftA 7s ease-in-out infinite 1.8s;
+  }
+
+  .smoke-glow::after {
+    top: 58%;
+    left: 47%;
+    width: 50%;
+    height: 40%;
+    background: radial-gradient(circle, rgba(100,48,150,0.45) 0%, rgba(100,48,150,0.2) 55%, rgba(100,48,150,0) 76%);
+    animation: smokeDriftB 9s ease-in-out infinite 1.8s;
+  }
+
+  @keyframes smokeAppear {
+    to { opacity: 1; }
+  }
+
+  @keyframes smokeBreathe {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50%      { transform: translate(-50%, -53%) scale(1.1); }
+  }
+
+  @keyframes smokeDriftA {
+    0%   { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    25%  { transform: translate(-40%, -60%) scale(1.25) rotate(7deg); }
+    50%  { transform: translate(-58%, -44%) scale(0.85) rotate(-5deg); }
+    75%  { transform: translate(-46%, -62%) scale(1.2) rotate(9deg); }
+    100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  }
+
+  @keyframes smokeDriftB {
+    0%   { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    30%  { transform: translate(-62%, -38%) scale(1.3) rotate(-9deg); }
+    60%  { transform: translate(-40%, -58%) scale(0.8) rotate(6deg); }
+    85%  { transform: translate(-56%, -46%) scale(1.15) rotate(-4deg); }
+    100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  }
+
+  .frase-text {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    line-height: 1.8;
+    text-align: center;
+    pointer-events: auto;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 1.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    opacity: 0;
+    animation: scrollHintIn 1s ease 2.4s forwards, floatHint 2.2s ease-in-out 3.4s infinite;
+  }
+
+  @keyframes scrollHintIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .scroll-hint span {
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(240,189,92,0.7);
+  }
+
+  .scroll-hint svg {
+    width: 28px;
+    height: 28px;
+    color: var(--dorado);
+    transform-origin: 75% 35%;
+    animation: lampTip 2.2s ease-in-out 3.4s infinite;
+  }
+
+  @keyframes lampTip {
+    0%, 100% { transform: rotate(0deg); }
+    50%      { transform: rotate(-20deg); }
+  }
+
+  @keyframes floatHint {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+    50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
+  }
+
+  /* ====== STARDUST BG (decorativo, sutil) ====== */
+  .stardust {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* ====== SECCIÓN DETALLES ====== */
+  .details {
+    position: relative;
+    background: var(--noche);
+    padding: 1.5rem 1.5rem 3.5rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .details::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(240,189,92,0.5), transparent);
+  }
+
+  .ornament {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .ornament svg {
+    width: 28px;
+    height: 28px;
+    color: var(--dorado);
+    overflow: visible;
+    animation: starBreathe 3s ease-in-out infinite;
+  }
+
+  .ornament .star-main {
+    filter: drop-shadow(0 0 6px rgba(240,189,92,0.55));
+  }
+
+  .ornament .star-rays line {
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    opacity: 0.2;
+    transform-origin: 50px 50px;
+    animation: rayTwinkle 2.4s ease-in-out infinite;
+  }
+
+  .ornament .ray-1 { animation-delay: 0s; }
+  .ornament .ray-2 { animation-delay: 0.6s; }
+  .ornament .ray-3 { animation-delay: 1.2s; }
+  .ornament .ray-4 { animation-delay: 1.8s; }
+
+  @keyframes rayTwinkle {
+    0%, 100% { opacity: 0.15; transform: scale(0.8); }
+    50%      { opacity: 1;    transform: scale(1.08); }
+  }
+
+  @keyframes starBreathe {
+    0%, 100% { filter: drop-shadow(0 0 4px rgba(240,189,92,0.4)); }
+    50%      { filter: drop-shadow(0 0 10px rgba(240,189,92,0.75)); }
+  }
+
+  .details-eyebrow {
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--turquesa);
+    margin-bottom: 1.5rem;
+  }
+
+  .details-title {
+    font-family: 'Marcellus', serif;
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+    color: var(--dorado-soft);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+
+  .info-card {
+    background: rgba(240,189,92,0.06);
+    border: 1px solid rgba(240,189,92,0.25);
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    max-width: 420px;
+    margin: 0 auto 1.5rem;
+    backdrop-filter: blur(6px);
+  }
+
+  .info-icon {
+    width: 38px;
+    height: 38px;
+    margin: 0 auto 1rem;
+    color: var(--magenta);
+  }
+
+  .info-icon svg { width: 100%; height: 100%; }
+
+  .info-label {
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--turquesa);
+    margin-bottom: 0.6rem;
+  }
+
+  .info-value {
+    font-family: 'Marcellus', serif;
+    font-size: 1.5rem;
+    color: var(--dorado-soft);
+    line-height: 1.3;
+  }
+
+  .info-value small {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(245,210,142,0.7);
+    margin-top: 0.3rem;
+    letter-spacing: 0.02em;
+  }
+
+  .info-value small.note {
+    font-size: 0.92rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: rgba(245,210,142,0.6);
+    margin-top: 0.6rem;
+  }
+
+  /* ====== MAPA ====== */
+  .map-wrap {
+    max-width: 420px;
+    margin: 0 auto 1.5rem;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(240,189,92,0.25);
+    filter: grayscale(0.15) sepia(0.12) saturate(1.1);
+  }
+
+  .map-wrap iframe {
+    width: 100%;
+    height: 240px;
+    display: block;
+    border: 0;
+  }
+
+  .map-address {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: rgba(245,210,142,0.75);
+    max-width: 380px;
+    margin: 1rem auto 0;
+    line-height: 1.5;
+  }
+
+  /* ====== SECCIÓN FOTOS/VIDEOS (CTA Drive) ====== */
+  .memories {
+    position: relative;
+    background: var(--marino);
+    padding: 4.5rem 1.5rem 4.5rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .memories::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,255,255,0.5), transparent);
+  }
+
+  .memories-title {
+    font-family: 'Marcellus', serif;
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    color: var(--dorado-soft);
+    margin-bottom: 0.9rem;
+  }
+
+  .memories-text {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: rgba(245,210,142,0.7);
+    max-width: 360px;
+    margin: 0 auto 2.25rem;
+    line-height: 1.6;
+  }
+
+  .btn-drive {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: linear-gradient(135deg, var(--dorado) 0%, #d99e3a 100%);
+    color: var(--marino);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    border: none;
+    padding: 1rem 2.2rem;
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(240,189,92,0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .btn-drive:active {
+    transform: scale(0.97);
+  }
+
+  .btn-drive svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* MODAL DE SUBIDA */
+  .upload-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,26,61,0.85);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .upload-overlay.open {
+    display: flex;
+  }
+
+  .upload-modal {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    max-height: 88vh;
+    overflow-y: auto;
+    background: linear-gradient(160deg, rgba(45,27,78,0.95), rgba(10,26,61,0.97));
+    border: 1px solid rgba(240,189,92,0.3);
+    border-radius: 20px;
+    padding: 2.2rem 1.6rem 1.8rem;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  }
+
+  .upload-close {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--dorado-soft);
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.4rem;
+  }
+
+  .upload-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--turquesa);
+    margin-bottom: 0.5rem;
+  }
+
+  .upload-title {
+    font-family: 'Marcellus', serif;
+    font-size: 1.4rem;
+    color: var(--dorado-soft);
+    margin-bottom: 1.5rem;
+  }
+
+  .upload-dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    border: 1.5px dashed rgba(240,189,92,0.45);
+    border-radius: 16px;
+    padding: 2rem 1rem;
+    cursor: pointer;
+    color: var(--dorado);
+    transition: border-color 0.25s ease, background 0.25s ease;
+  }
+
+  .upload-dropzone.dragover {
+    border-color: var(--dorado);
+    background: rgba(240,189,92,0.08);
+  }
+
+  .upload-dropzone svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .upload-dropzone-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: var(--dorado-soft);
+  }
+
+  .upload-file-list {
+    margin-top: 1.2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-height: 220px;
+    overflow-y: auto;
+  }
+
+  .upload-file-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    background: rgba(240,189,92,0.06);
+    border: 1px solid rgba(240,189,92,0.2);
+    border-radius: 10px;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .upload-file-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .upload-file-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    color: var(--dorado-soft);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .upload-file-remove {
+    background: none;
+    border: none;
+    color: var(--magenta);
+    font-size: 1.1rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+  }
+
+  .upload-file-remove:hover {
+    opacity: 1;
+  }
+
+  .upload-file-item.ready .upload-file-progress-bar {
+    background: var(--dorado-soft);
+  }
+
+  .upload-file-item.done .upload-file-progress-bar {
+    background: linear-gradient(90deg, var(--dorado), var(--turquesa));
+  }
+
+  .upload-file-item.error .upload-file-progress-bar {
+    background: var(--magenta);
+  }
+
+  .upload-file-progress {
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    overflow: hidden;
+  }
+
+  .upload-file-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--dorado), var(--turquesa));
+    transition: width 0.15s ease;
+  }
+
+  .upload-status {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    color: var(--turquesa);
+    margin: 1rem 0 0;
+    min-height: 1.2rem;
+  }
+
+  .upload-file-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem;
+    color: var(--magenta);
+    margin: 0;
+    display: none;
+  }
+
+  .upload-file-item.error .upload-file-note {
+    display: block;
+  }
+
+  .upload-submit-btn {
+    margin-top: 1.2rem;
+    width: 100%;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1.05rem;
+  }
+
+  .upload-submit-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  /* ====== DESENFOQUE A FOCO (cards al hacer scroll) ====== */
+  .reveal-blur {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(1.03);
+    transition: opacity 0.9s ease, filter 0.9s ease, transform 0.9s ease;
+  }
+
+  .reveal-blur.in-view {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+
+  /* ====== BRILLO QUE RECORRE EL TEXTO (títulos) ====== */
+  .brillo-texto {
+    background: linear-gradient(
+      100deg,
+      var(--dorado) 30%,
+      var(--turquesa) 50%,
+      var(--dorado) 70%
+    );
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .brillo-texto.in-view {
+    opacity: 1;
+    animation: recorridoBrillo 2s ease forwards;
+  }
+
+  @keyframes recorridoBrillo {
+    from { background-position: 100% 0; }
+    to   { background-position: 0% 0; }
+  }
+
+  /* ====== FOOTER ====== */
+  .xv-footer {
+    position: relative;
+    background: var(--marino);
+    text-align: center;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .xv-footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,255,255,0.5), transparent);
+  }
+
+  .xv-footer p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--dorado);
+  }
+
+  .xv-credit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.85rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+  }
+
+  /* ====== DESKTOP (no es el foco, pero evitamos que se vea roto) ====== */
+  @media (min-width: 769px) {
+    .hero-content { margin-top: 0; }
+    .info-card { padding: 2.5rem 2rem; }
+    .details, .memories { padding-left: 2rem; padding-right: 2rem; }
+  }
+
+  /* ====== REPRODUCTOR DE MUSICA ====== */
+  .player-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    margin: 0 auto 1.5rem;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .player-label {
+    font-family: 'Marcellus', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--turquesa);
+    margin: 0 0 0.6rem;
+  }
+
+  .player-song {
+    font-family: 'Marcellus', serif;
+    font-size: 1.3rem;
+    color: var(--dorado-soft);
+    margin: 0 0 0.2rem;
+  }
+
+  .player-artist {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,210,142,0.55);
+    margin: 0 0 1.4rem;
+  }
+
+  .player-progress-row {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .player-time {
+    font-size: 0.85rem;
+    color: rgba(245,210,142,0.6);
+    min-width: 2.6em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .player-bar {
+    position: relative;
+    flex: 1;
+    height: 3px;
+    border-radius: 2px;
+    background: transparent;
+    cursor: pointer;
+    padding: 10px 0;
+    margin: -10px 0;
+  }
+
+  .player-bar::before {
+    content: '';
+    position: absolute;
+    top: 10px; left: 0; right: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .player-bar-fill {
+    position: absolute;
+    top: 10px; left: 0;
+    height: 3px;
+    width: 0%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--magenta), var(--dorado));
+  }
+
+  .player-bar-handle {
+    position: absolute;
+    top: 11.5px;
+    left: 0%;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--dorado-soft);
+    box-shadow: 0 0 0 4px rgba(240,189,92,0.15);
+    transform: translate(-50%, -50%);
+  }
+
+  .player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    margin-top: 1.3rem;
+  }
+
+  .player-btn {
+    background: none;
+    border: none;
+    color: var(--dorado-soft);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .player-btn:hover { opacity: 1; transform: scale(1.06); }
+
+  .player-btn svg { width: 20px; height: 20px; }
+
+  .player-btn-play {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--dorado) 0%, #d99e3a 100%);
+    color: #2D1B4E;
+    box-shadow: 0 0 16px rgba(240,189,92,0.4);
+  }
+
+  .player-btn-play svg { width: 22px; height: 22px; }
+  .info-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-photo-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  .card-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(45, 27, 78, 0.80);
+    z-index: 1;
+  }
+
+  .info-card > .info-icon,
+  .info-card > .info-label,
+  .info-card > .info-value {
+    position: relative;
+    z-index: 2;
+  }
+  .countdown-wrap {
+    margin: 1.5rem auto 1.5rem;
+    text-align: center;
+  }
+
+  .countdown-label {
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--turquesa);
+    margin-bottom: 1rem;
+  }
+
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+    max-width: 420px;
+    margin: 0 auto;
+    margin: 0 auto;
+  }
+
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(240,189,92,0.06);
+    border: 1px solid rgba(240,189,92,0.25);
+    border-radius: 18px;
+    padding: 1.2rem 0.5rem;
+    backdrop-filter: blur(6px);
+  }
+
+  .countdown-num {
+    font-family: 'Marcellus', serif;
+    font-size: clamp(2rem, 8vw, 3rem);
+    color: var(--dorado);
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 20px rgba(240,189,92,0.3);
+  }
+
+  .countdown-unit {
+    font-size: 0.52rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--turquesa);
+    margin-top: 0.5rem;
+  }
+
+  .countdown-sep { display: none; }
+
+  /* ====== COLLAGE DE FOTOS ====== */
+  .gallery-wrap {
+    text-align: center;
+    margin: 1.5rem auto 1.5rem;
+  }
+
+  .gallery-label {
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--turquesa);
+    margin-bottom: 1.5rem;
+  }
+
+  .gallery-square {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1.5px solid rgba(240,189,92,0.45);
+  }
+
+  .gallery-square::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(45,27,78,0.12) 0%, rgba(45,27,78,0) 25%, rgba(45,27,78,0) 70%, rgba(45,27,78,0.35) 100%);
+  }
+
+  .gallery-square img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    z-index: 1;
+    animation: gallerySlide 30s ease-in-out infinite;
+  }
+
+  .gallery-square img:nth-child(1) { animation-delay: 0s; }
+  .gallery-square img:nth-child(2) { animation-delay: 5s; }
+  .gallery-square img:nth-child(3) { animation-delay: 10s; }
+  .gallery-square img:nth-child(4) { animation-delay: 15s; }
+  .gallery-square img:nth-child(5) { animation-delay: 20s; object-position: 50% 25%; }
+  .gallery-square img:nth-child(6) { animation-delay: 25s; }
+
+  @keyframes gallerySlide {
+    0%      { opacity: 0; transform: scale(1.08); }
+    3.33%   { opacity: 1; transform: scale(1.08); }
+    13.33%  { opacity: 1; transform: scale(1.14); }
+    20%     { opacity: 0; transform: scale(1.16); }
+    100%    { opacity: 0; transform: scale(1.16); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-square img { animation: none; opacity: 0; transform: scale(1); }
+    .gallery-square img:nth-child(1) { opacity: 1; }
+  }
+
+  .regalo-dato {
+    color: var(--dorado);
+    letter-spacing: 0.05em;
+    font-style: normal;
+  }
+
+  .regalo-frase {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    display: inline-block;
+  }
+
+  .regalo-nota {
+    display: block;
+    text-align: center;
+    margin-top: 0.9rem;
+    line-height: 1.9;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <video autoplay muted loop playsinline poster="">
+      <source src="VIDEO-ALADDIN.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-watermark-veil"></div>
+
+    <!-- Canvas de partículas doradas — dentro del hero -->
+    <canvas id="sparkles" style="position:absolute;inset:0;width:100%;height:100%;z-index:4;pointer-events:none;"></canvas>
+
+    <div class="hero-content">
+      <div class="name-wrap">
+        <!-- <img src="martina-nombre.png" alt="Martina"> -->
+        <p class="name-fallback">Martina</p>
+      </div>
+      <p class="hero-sub">Mis XV Años</p>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Explorá</span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+          <g transform="translate(0,512) scale(0.1,-0.1)">
+            <path d="M2600 3951 c-81 -26 -142 -65 -203 -130 -90 -97 -127 -201 -127 -352 0 -98 -25 -155 -107 -240 -150 -157 -403 -168 -647 -28 -215 124 -432 171 -636 140 -108 -17 -258 -71 -352 -127 -103 -62 -253 -204 -318 -301 -55 -82 -60 -107 -29 -147 23 -29 65 -34 116 -15 67 25 226 59 318 68 251 23 471 -37 647 -177 40 -32 136 -130 214 -218 224 -252 341 -355 529 -463 102 -59 267 -130 375 -162 41 -12 76 -23 78 -25 2 -1 -42 -120 -97 -263 -56 -144 -101 -274 -101 -290 0 -16 10 -37 23 -49 23 -22 24 -22 500 -22 464 0 478 1 497 20 12 12 20 33 20 53 0 17 -42 140 -94 272 -51 132 -92 241 -91 243 1 1 35 12 76 23 176 48 374 174 494 315 112 132 172 241 245 449 50 142 78 199 135 281 56 77 192 206 248 233 85 41 183 18 221 -51 19 -35 19 -36 1 -84 -27 -72 -103 -142 -210 -195 -64 -32 -94 -52 -103 -72 -40 -83 70 -137 252 -124 235 17 417 163 472 380 50 192 -57 417 -258 547 -175 113 -405 111 -608 -7 -41 -24 -107 -80 -178 -151 -81 -81 -128 -120 -166 -138 -154 -70 -296 -45 -417 76 -82 82 -109 140 -109 238 0 44 -5 103 -10 133 -32 165 -161 310 -321 360 -78 24 -204 24 -279 0z m277 -169 c95 -49 160 -148 170 -258 l6 -64 -312 0 -311 0 0 43 c0 131 82 246 209 294 55 20 185 12 238 -15z m1635 -433 c104 -27 237 -160 272 -273 41 -129 -14 -263 -144 -350 -40 -27 -42 -19 -5 33 46 64 67 123 68 196 1 102 -62 189 -176 240 -51 24 -68 27 -140 24 -103 -5 -163 -32 -270 -124 -150 -128 -246 -267 -317 -460 -80 -218 -91 -243 -139 -321 -125 -203 -311 -343 -536 -406 -114 -31 -385 -32 -525 -1 -326 73 -604 215 -810 415 -36 35 -118 122 -181 193 -254 285 -382 376 -615 435 -141 36 -364 43 -509 15 l-30 -6 35 30 c144 126 340 201 526 201 128 0 235 -32 409 -121 196 -101 273 -123 425 -123 91 -1 130 4 185 21 144 45 267 145 337 273 l33 60 331 0 331 0 39 -67 c139 -240 416 -347 656 -252 85 33 116 56 244 181 99 96 135 124 195 153 112 52 202 62 311 34z m-1700 -1626 l138 -6 19 -51 c11 -28 44 -115 75 -194 31 -79 56 -148 56 -153 0 -5 -131 -9 -320 -9 -176 0 -320 3 -320 7 0 4 31 88 70 187 38 100 74 194 80 210 9 24 14 27 38 22 15 -3 89 -9 164 -13z"/>
+          </g>
+        </svg>
+    </div>
+  </section>
+
+  <!-- DETALLES -->
+  <section class="details">
+    <p class="ornament">
+      <svg viewBox="0 0 100 100" fill="currentColor">
+        <path class="star-main" d="M50 4 L57 43 L96 50 L57 57 L50 96 L43 57 L4 50 L43 43 Z"/>
+        <g class="star-rays">
+          <line class="ray-1" x1="50" y1="50" x2="74" y2="26"/>
+          <line class="ray-2" x1="50" y1="50" x2="74" y2="74"/>
+          <line class="ray-3" x1="50" y1="50" x2="26" y2="74"/>
+          <line class="ray-4" x1="50" y1="50" x2="26" y2="26"/>
+        </g>
+      </svg>
+    </p>
+
+    <p class="details-eyebrow">Un mundo nuevo</p>
+
+    <!-- REPRODUCTOR DE MUSICA -->
+    <div class="player-wrap">
+      <p class="player-song" id="songName">Prince Ali</p>
+      <p class="player-artist" id="songArtist">Alan Menken</p>
+
+      <div class="player-progress-row">
+        <span class="player-time" id="curTime">00:00</span>
+        <div class="player-bar" id="playerBar">
+          <div class="player-bar-fill" id="barFill"></div>
+          <div class="player-bar-handle" id="barHandle"></div>
+        </div>
+        <span class="player-time" id="durTime">00:00</span>
+      </div>
+
+      <div class="player-controls">
+        <button class="player-btn" id="prevBtn" aria-label="Canción anterior" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+        </button>
+
+        <button class="player-btn player-btn-play" id="playBtn" aria-label="Reproducir" type="button">
+          <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+
+        <button class="player-btn" id="nextBtn" aria-label="Siguiente canción" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zM6 6l8.5 6L6 18z"/></svg>
+        </button>
+      </div>
+
+      <audio id="audioEl" preload="metadata"></audio>
+    </div>
+
+    <h2 class="details-title"><span class="brillo-texto">Te espero para celebrar</span></h2>
+
+    <!-- CONTADOR -->
+    <div class="countdown-wrap reveal-blur">
+      <p class="countdown-label">Faltan</p>
+      <div class="countdown">
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-dias">00</span>
+          <span class="countdown-unit">días</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-horas">00</span>
+          <span class="countdown-unit">horas</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-mins">00</span>
+          <span class="countdown-unit">minutos</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-segs">00</span>
+          <span class="countdown-unit">segundos</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FECHA -->
+    <div class="info-card reveal-blur">
+      <div class="card-photo-bg" style="background-image: url('aladdinalfombra.jpg');"></div>
+      <div class="card-photo-overlay"></div>
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <rect x="3" y="5" width="18" height="16" rx="2"/>
+          <path d="M3 10h18M8 3v4M16 3v4"/>
+        </svg>
+      </div>
+      <p class="info-label">Fecha</p>
+      <p class="info-value">
+        <span class="brillo-texto">Sábado 15 de Agosto</span>
+        <small>A partir de las 20:00 hs</small>
+      </p>
+    </div>
+
+    <!-- COLLAGE DE FOTOS -->
+    <div class="gallery-wrap reveal-blur">
+      <p class="gallery-label">Martina</p>
+
+      <div class="gallery-square">
+        <img src="fotomartina1.jpg" alt="Martina 1" loading="lazy">
+        <img src="fotomartina2.jpg" alt="Martina 2" loading="lazy">
+        <img src="fotomartina3.jpg" alt="Martina 3" loading="lazy">
+        <img src="fotomartina4.jpg" alt="Martina 4" loading="lazy">
+        <img src="fotomartina5.jpg" alt="Martina 5" loading="lazy">
+        <img src="fotomartina6.jpg" alt="Martina 6" loading="lazy">
+      </div>
+    </div>
+
+    <div class="info-card info-card-lugar reveal-blur">
+      <div class="card-photo-bg" style="background-image: url('castilloaladdin.gif'); transform: scale(1.15);"></div>
+      <div class="card-photo-overlay"></div>
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/>
+          <circle cx="12" cy="9.5" r="2.3"/>
+        </svg>
+      </div>
+      <p class="info-label">Lugar</p>
+      <p class="info-value">
+        <span class="brillo-texto">Salón Covisa 1</span>
+        <small>Montevideo, Sayago</small>
+      </p>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=Sal%C3%B3n+Covisa+1,+-34.8258922,-56.2323259&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="info-card reveal-blur">
+      <div class="card-photo-bg" style="background-image: url('noche.jpg');"></div>
+      <div class="card-photo-overlay"></div>
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M9 3l3 2 3-2 1 3-2 2v13H8V8L6 6l3-3z"/>
+        </svg>
+      </div>
+      <p class="info-label">Vestimenta</p>
+      <p class="info-value">
+        <span class="brillo-texto">Semi formal</span>
+        <small class="note">Una pequeña sugerencia: el azul noche será el color del vestido de la cumpleañera, así que lo dejamos solo para ella ✨</small>
+      </p>
+    </div>
+
+    <!-- TARJETA REGALO -->
+    <div class="info-card reveal-blur">
+      <div class="card-photo-bg" style="background-image: url('tesoro.jpg');"></div>
+      <div class="card-photo-overlay"></div>
+      <div class="info-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <rect x="3" y="8" width="18" height="13" rx="2"/>
+          <path d="M3 10h18M12 3c0 0-3 2-3 5h6c0-3-3-5-3-5z"/>
+          <line x1="12" y1="8" x2="12" y2="21"/>
+        </svg>
+      </div>
+      <p class="info-label">Un detalle para ella</p>
+      <p class="info-value">
+        <span class="brillo-texto regalo-frase">Tu presencia es mi mejor regalo, si aún querés dejar un detalle</span>
+        <small class="note regalo-nota">
+          Banco: <span class="regalo-dato">Prexcard</span><br>
+          Alias: <span class="regalo-dato">11761</span><br>
+          Titular: <span class="regalo-dato">Mary García</span>
+        </small>
+      </p>
+    </div>
+  </section>
+
+  <!-- RECUERDOS / DRIVE -->
+  <section class="memories">
+    <h2 class="memories-title"><span class="brillo-texto">Compartí el momento</span></h2>
+    <p class="memories-text">Subí tus fotos y videos de la noche para que quede el recuerdo completo de la fiesta.</p>
+
+    <!-- Botón que abre el modal de subida -->
+    <button type="button" class="btn-drive" onclick="abrirModalSubida()">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M9 3L7.17 5H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.17L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
+      Subir fotos y videos
+    </button>
+  </section>
+
+  <!-- MODAL DE SUBIDA -->
+  <div class="upload-overlay" id="uploadOverlay">
+    <div class="upload-modal">
+      <button type="button" class="upload-close" onclick="cerrarModalSubida()" aria-label="Cerrar">&times;</button>
+
+      <p class="upload-eyebrow">Compartí el momento</p>
+      <h3 class="upload-title">Subí tus fotos y videos</h3>
+
+      <label class="upload-dropzone" id="uploadDropzone">
+        <input type="file" id="uploadInput" multiple accept="image/*,video/*" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M12 16V4M12 4l-4 4M12 4l4 4"/>
+          <path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/>
+        </svg>
+        <span class="upload-dropzone-text">Tocá para elegir o arrastrá tus archivos acá</span>
+      </label>
+
+      <div class="upload-file-list" id="uploadFileList"></div>
+
+      <p class="upload-status" id="uploadStatus"></p>
+
+      <button type="button" class="btn-drive upload-submit-btn" id="uploadSubmitBtn" onclick="enviarArchivos()" disabled>
+        Enviar
+      </button>
+    </div>
+  </div>
+
+  <footer class="xv-footer">
+    <p>Martina · 15 Años</p>
+    <a href="https://instagram.com/livo_marketing" target="_blank" rel="noopener" class="xv-credit">
+      <span>Created by</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="14" height="14">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+      <span>livo_marketing</span>
+    </a>
+  </footer>
+  <script>
+  (function() {
+    const canvas = document.getElementById('sparkles');
+    const ctx    = canvas.getContext('2d');
+
+    function resize() {
+      canvas.width  = canvas.offsetWidth  * window.devicePixelRatio;
+      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    const W = () => canvas.offsetWidth;
+    const H = () => canvas.offsetHeight;
+
+    const COLORS = [
+      [255, 246, 200],
+      [240, 210, 140],
+      [220, 185, 100],
+      [255, 240, 180],
+      [200, 165,  80],
+    ];
+
+    // Timings coordinados con el CSS
+    const NAME_APPEARS = 1000;  // ms — cuando empieza el fade del nombre
+    const NAME_DONE    = 3000;  // ms — cuando el nombre está completo → brillos se desvanecen
+    const BIRTH_END    = 3000;  // ms — dejan de nacer cuando empieza el fade out
+    const FADEOUT_DUR  = 3200;  // ms — un poco más largo para que se note
+    const TOTAL        = 7500;
+
+    let particles = [];
+    let startedAt = null;
+    let falling   = false; // flag: cuando es true, todos caen
+    let introFinished = false; // true recién cuando termina la animación de entrada del nombre
+    const nameEl = document.querySelector('.name-fallback');
+
+    class Particle {
+      constructor(cx, cy) {
+        this.x = cx + (Math.random() - 0.5) * W() * 0.72;
+        this.y = cy + (Math.random() - 0.5) * H() * 0.18;
+
+        // Velocidad de flotación suave (antes de caer)
+        this.vx     = (Math.random() - 0.5) * 0.5;
+        this.vy     = (Math.random() - 0.5) * 0.3; // flotan, no caen todavía
+        this.r      = 0.8 + Math.random() * 1.5;
+
+        const c = COLORS[Math.floor(Math.random() * COLORS.length)];
+        this.r0 = c[0]; this.g0 = c[1]; this.b0 = c[2];
+
+        this.alpha    = 0;
+        this.maxAlpha = 0.5 + Math.random() * 0.5;
+        this.fadeIn   = true;
+        this.blinkSpd = 0.018 + Math.random() * 0.022;
+        this.blinkDir = 1;
+
+        this.angle  = Math.random() * Math.PI;
+        this.rotSpd = (Math.random() - 0.5) * 0.035;
+
+        this.type      = Math.random() > 0.3 ? 'star' : 'dot';
+        this.fadingOut = false;
+      }
+
+      update(elapsed) {
+        // Fade in
+        if (this.fadeIn) {
+          this.alpha += 0.05;
+          if (this.alpha >= this.maxAlpha) { this.alpha = this.maxAlpha; this.fadeIn = false; }
+        } else if (!this.fadingOut) {
+          // Parpadeo mientras flotan
+          this.alpha += this.blinkDir * this.blinkSpd;
+          if (this.alpha >= this.maxAlpha)       this.blinkDir = -1;
+          if (this.alpha <= this.maxAlpha * 0.2) this.blinkDir =  1;
+        }
+
+        // Flotación suave siempre (no caen nunca)
+        this.x += this.vx;
+        this.y += this.vy;
+        this.vx *= 0.998;
+        this.vy *= 0.998;
+
+        // Fade out in-place cuando el nombre está completo
+        if (this.fadingOut) {
+          this.alpha -= this.maxAlpha / (FADEOUT_DUR / 16.7); // 60fps
+          if (this.alpha < 0) this.alpha = 0;
+        }
+
+        this.angle += this.rotSpd;
+      }
+
+      draw() {
+        if (this.alpha <= 0) return;
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, this.alpha);
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.angle);
+
+        if (this.type === 'star') {
+          const s = this.r;
+          ctx.fillStyle = `rgb(${this.r0},${this.g0},${this.b0})`;
+          ctx.beginPath();
+          ctx.moveTo(0,         -s * 2.8);
+          ctx.lineTo( s * 0.28, -s * 0.28);
+          ctx.lineTo( s * 2.8,   0);
+          ctx.lineTo( s * 0.28,  s * 0.28);
+          ctx.lineTo(0,          s * 2.8);
+          ctx.lineTo(-s * 0.28,  s * 0.28);
+          ctx.lineTo(-s * 2.8,   0);
+          ctx.lineTo(-s * 0.28, -s * 0.28);
+          ctx.closePath();
+          ctx.fill();
+          ctx.globalAlpha = Math.max(0, this.alpha * 0.85);
+          ctx.fillStyle = 'rgba(255,255,255,1)';
+          ctx.beginPath();
+          ctx.arc(0, 0, s * 0.3, 0, Math.PI * 2);
+          ctx.fill();
+        } else {
+          const grad = ctx.createRadialGradient(0,0,0, 0,0, this.r * 2.2);
+          grad.addColorStop(0,   `rgba(255,255,240,1)`);
+          grad.addColorStop(0.5, `rgba(${this.r0},${this.g0},${this.b0},0.7)`);
+          grad.addColorStop(1,   `rgba(${this.r0},${this.g0},${this.b0},0)`);
+          ctx.fillStyle = grad;
+          ctx.beginPath();
+          ctx.arc(0, 0, this.r * 2.2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        ctx.restore();
+      }
+
+      isDead() {
+        return this.alpha <= 0;
+      }
+    }
+
+    function animate(ts) {
+      if (!startedAt) startedAt = ts;
+      const elapsed = ts - startedAt;
+
+      ctx.clearRect(0, 0, W(), H());
+
+      const nameRect = nameEl ? nameEl.getBoundingClientRect() : null;
+      const canvasRect = canvas.getBoundingClientRect();
+      const cx = nameRect ? (nameRect.left + nameRect.width / 2) - canvasRect.left : W() / 2;
+      const cy = nameRect ? (nameRect.top + nameRect.height / 2) - canvasRect.top : H() * 0.42;
+
+      // Generar brillos desde el principio hasta que el nombre esté completo
+      if (elapsed < BIRTH_END) {
+        const density = 1 - (elapsed / BIRTH_END);
+        const count = Math.random() < (0.35 + density * 0.65) ? 2 : 1;
+        for (let i = 0; i < count; i++) {
+          if (particles.length < 130) particles.push(new Particle(cx, cy));
+        }
+      }
+
+      // Activar fade-out in-place cuando el nombre está completo
+      if (elapsed >= NAME_DONE && !falling) {
+        falling = true;
+        particles.forEach(p => { p.fadingOut = true; });
+      }
+
+      particles.forEach(p => { p.update(); p.draw(); });
+      particles = particles.filter(p => !p.isDead());
+
+      if (elapsed < TOTAL || particles.length > 0) {
+        requestAnimationFrame(animate);
+      } else {
+        canvas.style.display = 'none';
+        introFinished = true; // recién acá se habilita el efecto al tocar el nombre
+      }
+    }
+
+    // Arrancar inmediatamente para que los brillos aparezcan antes del nombre
+    const video = document.querySelector('.hero video');
+    if (video) {
+      video.addEventListener('canplay', () => requestAnimationFrame(animate), { once: true });
+      setTimeout(() => { if (!startedAt) requestAnimationFrame(animate); }, 300);
+    } else {
+      setTimeout(() => requestAnimationFrame(animate), 300);
+    }
+
+    // ====== BRILLOS AL TOCAR EL NOMBRE ======
+    // Solo se activa una vez que terminó la animación de entrada.
+    // Los brillos aparecen exactamente en el punto donde se toca el nombre.
+    let touchParticles = [];
+    let touchLoopRunning = false;
+
+    function spawnTouchSparkles(x, y) {
+      canvas.style.display = 'block';
+      for (let i = 0; i < 14; i++) {
+        const p = new Particle(x, y);
+        // Dispersión chica alrededor del punto tocado, no en toda la pantalla
+        p.x = x + (Math.random() - 0.5) * 26;
+        p.y = y + (Math.random() - 0.5) * 26;
+        // Impulso leve hacia afuera para efecto "estallido"
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 0.4 + Math.random() * 0.9;
+        p.vx = Math.cos(angle) * speed;
+        p.vy = Math.sin(angle) * speed;
+        touchParticles.push(p);
+      }
+
+      if (!touchLoopRunning) {
+        touchLoopRunning = true;
+        const holdStart = performance.now();
+        requestAnimationFrame(function touchLoop(ts) {
+          const elapsed = ts - holdStart;
+
+          // Después de un breve instante visible, empiezan a desvanecerse
+          if (elapsed > 350) {
+            touchParticles.forEach(p => { p.fadingOut = true; });
+          }
+
+          ctx.clearRect(0, 0, W(), H());
+          touchParticles.forEach(p => { p.update(); p.draw(); });
+          touchParticles = touchParticles.filter(p => !p.isDead());
+
+          if (touchParticles.length > 0) {
+            requestAnimationFrame(touchLoop);
+          } else {
+            ctx.clearRect(0, 0, W(), H());
+            canvas.style.display = 'none';
+            touchLoopRunning = false;
+          }
+        });
+      }
+    }
+
+    if (nameEl) {
+      nameEl.addEventListener('click', (e) => {
+        if (!introFinished) return;
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        spawnTouchSparkles(x, y);
+      });
+    }
+  })();
+  </script>
+
+
+  <script>
+  (function() {
+    const target = new Date('2026-08-15T20:00:00');
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function update() {
+      const now = new Date();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-dias').textContent = '00';
+        document.getElementById('cd-horas').textContent = '00';
+        document.getElementById('cd-mins').textContent = '00';
+        document.getElementById('cd-segs').textContent = '00';
+        return;
+      }
+
+      const dias  = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const segs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-dias').textContent  = pad(dias);
+      document.getElementById('cd-horas').textContent = pad(horas);
+      document.getElementById('cd-mins').textContent  = pad(mins);
+      document.getElementById('cd-segs').textContent  = pad(segs);
+    }
+
+    update();
+    setInterval(update, 1000);
+  })();
+  </script>
+
+
+  <!-- Theme-color dinámico: marino (hero) → violeta (detalles) -->
+  <script>
+  (function() {
+    const meta = document.querySelector('meta[name="theme-color"]');
+    const hero = document.querySelector('.hero');
+    if (!meta || !hero) return;
+
+    const startColor = [10, 26, 61];   // #0A1A3D marino
+    const endColor   = [45, 27, 78];   // #2D1B4E violeta
+
+    function lerp(a, b, t) {
+      return Math.round(a + (b - a) * t);
+    }
+
+    function updateThemeColor() {
+      const heroHeight = hero.offsetHeight;
+      const transitionStart = heroHeight * 0.98;
+      const transitionDistance = 80;
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      // Transición empieza cuando se recorrió el 98% del hero
+      const t = Math.min(Math.max((scrollY - transitionStart) / transitionDistance, 0), 1);
+
+      const r = lerp(startColor[0], endColor[0], t);
+      const g = lerp(startColor[1], endColor[1], t);
+      const b = lerp(startColor[2], endColor[2], t);
+
+      meta.setAttribute('content', `rgb(${r}, ${g}, ${b})`);
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateThemeColor();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    updateThemeColor();
+  })();
+  </script>
+
+  <script>
+  (function() {
+    const el = document.querySelector('.hero-sub');
+    if (!el) return;
+
+    const newText  = 'No hace falta ser un genio para saber que mi mayor deseo es compartir esta noche contigo';
+    const deleteSpeed = 40;
+    const typeSpeed   = 80;
+    const startDelay  = 2800 + 3000;
+
+    function deleteText(cb) {
+      let text = el.textContent;
+      function step() {
+        if (text.length === 0) { cb(); return; }
+        text = text.slice(0, -1);
+        el.textContent = text;
+        setTimeout(step, deleteSpeed);
+      }
+      step();
+    }
+
+    setTimeout(() => {
+      deleteText(() => {
+        // Ocultar hero-sub y crear nuevo elemento en su lugar
+        el.style.visibility = 'hidden';
+
+        // Contenedor que confina el humo al espacio exacto del párrafo
+        const wrap = document.createElement('div');
+        wrap.className = 'frase-wrap';
+
+        // Humo violeta oscuro (nube difusa con animación de respiración)
+        const smoke = document.createElement('div');
+        smoke.className = 'smoke-glow';
+        wrap.appendChild(smoke);
+
+        const frase = document.createElement('p');
+        frase.className = 'frase-text';
+        frase.textContent = '';
+        wrap.appendChild(frase);
+
+        el.parentNode.appendChild(wrap);
+
+        let i = 0;
+        function typeStep() {
+          if (i >= newText.length) return;
+          frase.textContent += newText[i];
+          i++;
+          setTimeout(typeStep, typeSpeed);
+        }
+        typeStep();
+      });
+    }, startDelay);
+  })();
+  </script>
+
+  <!-- ====== REPRODUCTOR DE MUSICA ====== -->
+  <script>
+  (function() {
+    const tracks = [
+      { title: 'Prince Ali', artist: 'Alan Menken', src: 'Prince_Ali.mp3', start: 140, end: 170 }
+    ];
+
+    const FADE = 1.5; // segundos de fundido al inicio y al final del tramo
+
+    let currentTrack = 0;
+    let isPlaying = false;
+    let dragging = false;
+
+    const audio       = document.getElementById('audioEl');
+    const songNameEl  = document.getElementById('songName');
+    const songArtistEl = document.getElementById('songArtist');
+    const curTimeEl   = document.getElementById('curTime');
+    const durTimeEl  = document.getElementById('durTime');
+    const barFill    = document.getElementById('barFill');
+    const barHandle  = document.getElementById('barHandle');
+    const bar        = document.getElementById('playerBar');
+    const playBtn    = document.getElementById('playBtn');
+    const playIcon   = document.getElementById('playIcon');
+    const prevBtn    = document.getElementById('prevBtn');
+    const nextBtn    = document.getElementById('nextBtn');
+
+    const ICON_PLAY  = '<path d="M8 5v14l11-7z"/>';
+    const ICON_PAUSE = '<path d="M7 5h4v14H7zM13 5h4v14h-4z"/>';
+
+    function formatTime(s) {
+      if (!isFinite(s) || s < 0) s = 0;
+      const m = Math.floor(s / 60);
+      const sec = Math.floor(s % 60);
+      return (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    function setProgress(pct, currentLabelSeconds) {
+      pct = Math.max(0, Math.min(100, pct));
+      barFill.style.width = pct + '%';
+      barHandle.style.left = pct + '%';
+      if (currentLabelSeconds !== undefined) curTimeEl.textContent = formatTime(currentLabelSeconds);
+    }
+
+    function loadTrack(index, autoplay) {
+      currentTrack = (index + tracks.length) % tracks.length;
+      const track = tracks[currentTrack];
+
+      songNameEl.textContent = track.title;
+      songArtistEl.textContent = track.artist;
+      setProgress(0, 0);
+      durTimeEl.textContent = formatTime(track.end - track.start);
+      audio.src = track.src;
+      audio.volume = 0;
+
+      const onLoaded = function() {
+        audio.currentTime = track.start;
+        audio.removeEventListener('loadedmetadata', onLoaded);
+        if (autoplay) {
+          audio.play().catch(function(){});
+          isPlaying = true;
+          playIcon.innerHTML = ICON_PAUSE;
+        }
+      };
+      audio.addEventListener('loadedmetadata', onLoaded);
+    }
+
+    function togglePlay() {
+      if (audio.paused) {
+        audio.play().then(function() {
+          isPlaying = true;
+          playIcon.innerHTML = ICON_PAUSE;
+        }).catch(function(){});
+      } else {
+        audio.pause();
+        isPlaying = false;
+        playIcon.innerHTML = ICON_PLAY;
+      }
+    }
+
+    playBtn.addEventListener('click', togglePlay);
+    prevBtn.addEventListener('click', function() { loadTrack(currentTrack - 1, isPlaying); });
+    nextBtn.addEventListener('click', function() { loadTrack(currentTrack + 1, isPlaying); });
+
+    audio.addEventListener('timeupdate', function() {
+      if (dragging) return;
+      const track = tracks[currentTrack];
+      const t = audio.currentTime;
+
+      // Bucle: al llegar al final del tramo, volvemos al inicio
+      if (t >= track.end) {
+        audio.currentTime = track.start;
+        return;
+      }
+
+      // Fundido de volumen: sube al entrar, baja al acercarse al final
+      const distDesdeInicio = t - track.start;
+      const distHastaFinal  = track.end - t;
+      let vol = 1;
+      if (distDesdeInicio < FADE) vol = distDesdeInicio / FADE;
+      if (distHastaFinal < FADE) vol = Math.min(vol, distHastaFinal / FADE);
+      audio.volume = Math.max(0, Math.min(1, vol));
+
+      const effCurrent  = Math.max(0, t - track.start);
+      const effDuration = Math.max(0.01, track.end - track.start);
+      setProgress((effCurrent / effDuration) * 100, effCurrent);
+    });
+
+    function seekFromClientX(clientX) {
+      const rect = bar.getBoundingClientRect();
+      let pct = (clientX - rect.left) / rect.width;
+      pct = Math.max(0, Math.min(1, pct));
+      const track = tracks[currentTrack];
+      const effDuration = Math.max(0.01, track.end - track.start);
+      audio.currentTime = track.start + pct * effDuration;
+      setProgress(pct * 100, pct * effDuration);
+    }
+
+    bar.addEventListener('click', function(e) { seekFromClientX(e.clientX); });
+
+    barHandle.addEventListener('mousedown', function() { dragging = true; });
+    barHandle.addEventListener('touchstart', function() { dragging = true; }, {passive: true});
+
+    window.addEventListener('mousemove', function(e) { if (dragging) seekFromClientX(e.clientX); });
+    window.addEventListener('touchmove', function(e) {
+      if (dragging && e.touches[0]) seekFromClientX(e.touches[0].clientX);
+    }, {passive: true});
+
+    window.addEventListener('mouseup', function() { dragging = false; });
+    window.addEventListener('touchend', function() { dragging = false; });
+
+    loadTrack(0, false);
+  })();
+  </script>
+
+  <script>
+  (function() {
+    // ⚠️ Si el link de tu servidor cambia, actualizá esta línea:
+    const UPLOAD_URL = 'https://desktop-i8e4crg.taile69d98.ts.net/upload';
+
+    // Datos de Cloudinary (respaldo automático si el servidor propio no responde)
+    const CLOUD_NAME = 'v5t6ha3o';
+    const UPLOAD_PRESET = 'martinaxv';
+    const CLOUDINARY_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/auto/upload`;
+
+    const overlay    = document.getElementById('uploadOverlay');
+    const dropzone   = document.getElementById('uploadDropzone');
+    const input      = document.getElementById('uploadInput');
+    const fileList   = document.getElementById('uploadFileList');
+    const statusEl   = document.getElementById('uploadStatus');
+    const submitBtn  = document.getElementById('uploadSubmitBtn');
+
+    let entradas = []; // { file, item, bar, listo }
+
+    window.abrirModalSubida = function() {
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.cerrarModalSubida = function() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) window.cerrarModalSubida();
+    });
+
+    input.addEventListener('change', function() {
+      agregarArchivos(Array.from(input.files));
+      input.value = '';
+    });
+
+    ['dragover', 'dragenter'].forEach(evt => {
+      dropzone.addEventListener(evt, function(e) {
+        e.preventDefault();
+        dropzone.classList.add('dragover');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(evt => {
+      dropzone.addEventListener(evt, function(e) {
+        e.preventDefault();
+        dropzone.classList.remove('dragover');
+      });
+    });
+
+    dropzone.addEventListener('drop', function(e) {
+      e.preventDefault();
+      if (e.dataTransfer && e.dataTransfer.files) {
+        agregarArchivos(Array.from(e.dataTransfer.files));
+      }
+    });
+
+    function formatSize(bytes) {
+      const mb = bytes / (1024 * 1024);
+      return mb >= 1 ? mb.toFixed(1) + ' MB' : (bytes / 1024).toFixed(0) + ' KB';
+    }
+
+    function actualizarBotonEnviar() {
+      submitBtn.disabled = !entradas.some(en => en.listo);
+    }
+
+    // Al elegir/arrastrar archivos: se agregan a la lista y arranca la LECTURA real
+    // del archivo en el navegador (progreso genuino, no una animación falsa).
+    // Todavía no se manda a ningún servidor: eso pasa recién al tocar "Enviar".
+    function agregarArchivos(files) {
+      files.forEach(file => {
+        const item = document.createElement('div');
+        item.className = 'upload-file-item';
+        item.innerHTML = `
+          <div class="upload-file-top">
+            <span class="upload-file-name">${file.name} · ${formatSize(file.size)}</span>
+            <button type="button" class="upload-file-remove" aria-label="Quitar" title="Quitar">&times;</button>
+          </div>
+          <div class="upload-file-progress"><div class="upload-file-progress-bar"></div></div>
+        `;
+        fileList.appendChild(item);
+
+        const entrada = {
+          file: file,
+          item: item,
+          bar: item.querySelector('.upload-file-progress-bar'),
+          listo: false
+        };
+        entradas.push(entrada);
+
+        item.querySelector('.upload-file-remove').addEventListener('click', function() {
+          entradas = entradas.filter(en => en !== entrada);
+          item.remove();
+          actualizarBotonEnviar();
+        });
+
+        leerArchivo(entrada);
+      });
+    }
+
+    // Lectura real del archivo en el navegador, con progreso genuino
+    function leerArchivo(entrada) {
+      const reader = new FileReader();
+
+      reader.onprogress = function(e) {
+        if (e.lengthComputable) {
+          const pct = Math.round((e.loaded / e.total) * 100);
+          entrada.bar.style.width = pct + '%';
+        }
+      };
+
+      reader.onload = function() {
+        entrada.bar.style.width = '100%';
+        entrada.listo = true;
+        entrada.item.classList.add('ready');
+        actualizarBotonEnviar();
+      };
+
+      reader.onerror = function() {
+        entrada.item.classList.add('error');
+      };
+
+      reader.readAsArrayBuffer(entrada.file);
+    }
+
+    function marcarListo(entrada) {
+      entrada.item.classList.remove('error');
+      entrada.item.classList.add('done');
+    }
+
+    function marcarError(entrada) {
+      entrada.item.classList.remove('done');
+      entrada.item.classList.add('error');
+    }
+
+    function actualizarStatusFinal(lote) {
+      const conError = lote.some(entrada => entrada.item.classList.contains('error'));
+      if (conError) {
+        statusEl.style.color = 'var(--magenta)';
+        statusEl.textContent = 'Algún archivo no se pudo subir. Revisá tu conexión e intentá de nuevo.';
+        submitBtn.disabled = false;
+      } else {
+        statusEl.style.color = 'var(--turquesa)';
+        statusEl.textContent = '¡Listo! Gracias por compartir el momento 💛';
+        setTimeout(() => {
+          window.cerrarModalSubida();
+          entradas = [];
+          fileList.innerHTML = '';
+          statusEl.textContent = '';
+        }, 1800);
+      }
+    }
+
+    // Al tocar "Enviar": recién ahí se manda de verdad todo lo que ya quedó listo
+    window.enviarArchivos = function() {
+      const lote = entradas.filter(en => en.listo);
+      if (lote.length === 0) return;
+
+      submitBtn.disabled = true;
+      statusEl.style.color = 'var(--turquesa)';
+      statusEl.textContent = 'Subiendo, no cierres esta ventana...';
+
+      // Reiniciamos la barra para mostrar el progreso real de la subida
+      lote.forEach(entrada => entrada.bar.style.width = '0%');
+
+      subirAServidorPropio(lote);
+    };
+
+    // Camino principal: subida real a la PC de Martina.
+    // Si no contesta en 2 segundos, pasa directo al respaldo.
+    function subirAServidorPropio(lote) {
+      const formData = new FormData();
+      lote.forEach(entrada => formData.append('archivos', entrada.file));
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', UPLOAD_URL, true);
+      xhr.timeout = 2000;
+
+      xhr.upload.addEventListener('progress', function(e) {
+        if (e.lengthComputable) {
+          const pct = Math.round((e.loaded / e.total) * 100);
+          lote.forEach(entrada => entrada.bar.style.width = pct + '%');
+        }
+      });
+
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          lote.forEach(marcarListo);
+          actualizarStatusFinal(lote);
+        } else {
+          subirARespaldo(lote);
+        }
+      };
+
+      xhr.onerror = function() {
+        subirARespaldo(lote);
+      };
+
+      xhr.ontimeout = function() {
+        subirARespaldo(lote);
+      };
+
+      xhr.send(formData);
+    }
+
+    // Camino de respaldo: la PC no respondió a tiempo, subimos a Cloudinary (uno por uno)
+    function subirARespaldo(lote) {
+      let completados = 0;
+
+      lote.forEach(entrada => {
+        const formData = new FormData();
+        formData.append('file', entrada.file);
+        formData.append('upload_preset', UPLOAD_PRESET);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', CLOUDINARY_URL, true);
+
+        xhr.upload.addEventListener('progress', function(e) {
+          if (e.lengthComputable) {
+            const pct = Math.round((e.loaded / e.total) * 100);
+            entrada.bar.style.width = pct + '%';
+          }
+        });
+
+        xhr.onload = function() {
+          completados++;
+          if (xhr.status >= 200 && xhr.status < 300) {
+            marcarListo(entrada);
+          } else {
+            marcarError(entrada);
+          }
+          if (completados === lote.length) actualizarStatusFinal(lote);
+        };
+
+        xhr.onerror = function() {
+          completados++;
+          marcarError(entrada);
+          if (completados === lote.length) actualizarStatusFinal(lote);
+        };
+
+        xhr.send(formData);
+      });
+    }
+  })();
+  </script>
+
+  <script>
+  (function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        } else {
+          entry.target.classList.remove('in-view');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.brillo-texto').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal-blur').forEach(el => observer.observe(el));
+  })();
+  </script>
+
+</body>
+</html>
